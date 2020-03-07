@@ -1,0 +1,51 @@
+.entry-header {
+    background: url(http://www.london-bg.eu/wp-content/uploads/2015/05/background.png);
+    background-repeat: repeat;
+    display: block;
+    padding: 2rem;
+    width: 100%;
+    border-bottom: 1px solid #E9E9E9;
+    border-top: 1px solid #EEE;
+
+    .container {
+        
+        .entry-title {
+            display: block;
+            font-size: 18px;
+            color: $gray-4;
+        }
+        
+        a {
+            color: $blue;
+            &:hover {
+                color: $black-2;
+            }
+        }
+    }
+}
+
+.page-article {
+    @extend .content-elements;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    
+    .container {
+        .entry-content {
+            margin: 0 auto;
+        }
+    }
+}
+
+.aligncenter{
+    display: block;
+    margin: 0 auto;
+}
+
+.london {
+    color: #ae0000; 
+    font-weight: bold;
+}
+
+h2 {
+    color: $black-1;
+}

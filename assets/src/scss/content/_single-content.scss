@@ -1,0 +1,83 @@
+.single-post {
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+
+        .fas {
+            font-size: 2em;
+            padding: 0 1.5em;
+
+            @media only screen and (max-width: 700px) {
+                padding: 0 0.5em;
+            }
+        }
+
+        h4 {
+            display: block;
+            color: $black;
+            font-weight: 600;
+        }
+        p {
+            display: block;
+            color: $blue;
+
+            &:hover {
+                color: $black;
+            }
+        }
+
+        .nav-next {
+            max-width: 40%;
+            a {
+                @include post-nav-text;
+
+                h4 {text-align: right;}
+
+                .fas {padding-right: 0;}
+            }
+        }
+
+        .nav-previous {
+            a {
+                @include post-nav-text;
+                text-align: right;
+
+                h4 {text-align: left;}
+
+                .fas {padding-left: 0;}
+            }
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .post-nav-title {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 700px) {
+            h4 {
+                padding: 0;
+                font-size: 1.1em;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+
+    .posts-news .the-post .post .post-content .the-post-content {
+        .wp-video {
+            @media only screen and (max-width: 350px) {
+                width: 250px !important;
+            }
+            @media only screen and (max-width: 400px) and (min-width: 351px){
+                width: 300px !important;
+            }
+            @media only screen and (max-width: 500px) and (min-width: 401px){
+                width: 350px !important;
+            }
+       }
+    }
+   
+}
+

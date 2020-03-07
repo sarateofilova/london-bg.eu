@@ -1,0 +1,41 @@
+.sponsors-slider {
+    // @extend .container;
+    @extend .content-elements;
+    margin-bottom: 3rem;
+
+    .slider-slick {
+
+        .slick-track {
+            display: flex !important;
+            align-items: center;
+
+            .slick-slide {
+                margin-right: 0.5rem;
+            }
+        }
+        .slick-arrow:before {
+            background: $gray-8;
+            padding: 0 0.5rem;
+            color: white !important;
+            border-radius: 0.3rem;
+            z-index: 999;
+            &:hover{
+                
+            }
+        }
+        .slick-arrow:hover::before {
+            background: $blue;
+        }
+
+        .slick-prev, .slick-next {
+            top: -1.5rem;
+        }
+
+        .slick-prev {
+            right: 3.5rem;
+        }
+        .slick-next {
+            right: 1rem;
+        }
+    }
+}

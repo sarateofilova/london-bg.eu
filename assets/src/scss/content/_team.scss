@@ -1,0 +1,26 @@
+.team {
+    @extend.content-elements;
+
+    .name {
+        @include widgettitle;
+        
+    }
+
+    .image {
+        text-align: center;
+        padding: 1em 0 2.5em 0;
+        
+        img {
+            border: 1px solid rgba($gray-1, 0.5);
+            box-shadow: 0 0 5px $gray-1;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    section {
+
+    }
+}
+
+

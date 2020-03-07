@@ -1,0 +1,112 @@
+// Courses
+.widgettitle, 
+.widget-title {
+    @include widgettitle;
+}
+
+.courses-wrapper {
+    // @extend .container;
+    @extend .content-elements;
+
+}
+
+.courses-content {
+    @extend .content-elements;
+    padding: 0;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+
+    @include custom-image-widget;
+
+            .wp-caption-text {
+                @include widgettitle;
+                margin-top: 1em;
+                border-bottom: none;
+                text-transform: none;
+            }
+}
+
+// News
+
+.news {
+    @extend .content-elements;
+
+    .news-title {
+        @include widgettitle;
+    }
+
+    .posts {
+        overflow: hidden;
+
+        .post {
+            display: flex;
+            justify-content: flex-start;
+            align-content: stretch;
+            
+            .post-image {
+            }
+            
+            .post-main {
+                flex: 0 0 80%;
+                padding-left: 1.5em;
+            }
+        }
+
+        .post-image {
+            position: relative;
+            margin: 0.2em;
+            width: 140px;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 4px;
+
+            
+            a {
+            
+                img {
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    height: auto;
+                    border-radius: 4px;
+
+                }
+            }
+
+        }
+    }
+}
+
+.read-more {
+    display: block;
+    color: $blue;
+}
+
+article.page {
+    @extend .content-elements;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .gallery {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .news .posts .post {
+        flex-wrap: wrap;
+        margin-bottom: 1em;
+
+        .post-image {
+            margin: 0 auto 1em auto;
+            width: 100%;
+            height: 180px;
+        }
+        .post-main {
+            padding-left: 0;
+        }
+    }
+}

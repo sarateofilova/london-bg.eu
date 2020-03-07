@@ -1,0 +1,181 @@
+.posts-news {
+    @extend .container;
+    padding: 0;
+    padding: 3rem 0;
+
+    @media only screen and (max-width: 1000px) {
+        margin: 0 2rem;
+    }
+
+    .the-post {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .icon-container {
+            display: block;
+            color: $blue;
+            font-size: 1.5rem;
+            border: 2px solid $blue;
+            padding: 1rem 1.5rem;
+            margin-right: 2rem;
+            
+        }
+        .edit-pic-mobile {display: none;}
+ 
+
+        .post {
+
+            .blog-title {
+                display: flex;
+                @media only screen and (max-width: 700px) {
+                    display: flex;
+                    justify-content: center;
+                    
+                    h3 {
+                        line-height: 1.6;
+                    }
+                }
+            }
+            h3, a {
+                display: block;
+                line-height: 1;
+            }
+
+            .post-content {
+                display: flex;
+
+                .image {
+                    flex: 1 0 20%;
+                    width: auto;
+                    height: 100px;
+                    margin-right: 2em;
+                    margin-bottom: 1em;
+                    line-height: 1;
+                    overflow: hidden;
+                    position: relative;
+
+                    @media only screen and (max-width: 700px) {
+                        height: 200px;
+                    }
+
+
+                    img {
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius: 0.2em;
+                    }
+                }
+
+                .read-more {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    letter-spacing: 0.15em;
+                    background: $blue;
+                    color: $white;
+                    padding: 1.2em 2em;
+                    border-radius: 0.25em;
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+
+            .blog-info-box {
+                display: flex;
+                color: $gray-9;
+                margin-bottom: 1.5em;
+                margin-top: 1.5em;
+
+                @media only screen and (max-width: 700px) {
+                    flex-direction: column;
+                }
+
+                .fas {
+                    padding: 1em 0.5em;
+                }
+
+                .date, 
+                .comments, 
+                .category {
+                    margin-right: 2em;                    
+                    span > *, i {
+                        display: inline;
+                    }
+                }
+
+                .category {
+                    display: flex;
+                    align-items: center;
+
+                    .content .post-categories li a {
+                        color: $gray-9;
+                    }
+                }
+            }
+        }
+    }
+    .pagination {
+        display: block;
+        @extend .container;
+        position: relative;
+        text-align: left;
+
+        .pagination-border {
+            display: inline-flex;
+            border: 0.2px solid $gray-2;
+
+            a:last-of-type {
+                border-right-width: 0;
+            }
+
+        }
+        .page-numbers {
+            display: inline-block;
+            border: 0.2px solid $gray-2;
+            padding: 1em 1em;
+            border-left-width: 0;
+            border-top-width: 0;
+            border-bottom-width: 0;
+        }
+        .current {
+            background: #f5f5f5;
+            border: 0.05px solid $gray-2;
+
+        }
+    }
+    
+
+    @media only screen and (max-width: 700px) {
+        .the-post {
+            flex-wrap: wrap;
+
+            .icon-container {
+                margin-top: 0.3em;
+            }
+
+            .edit-pic-desctop {display: none;}
+            .edit-pic-mobile {display: inline;}
+
+            .post-content {
+                flex-wrap: wrap;
+
+                .image {
+                    flex: 1;
+
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+
+                }
+            }
+        }
+
+        
+    }
+}
+

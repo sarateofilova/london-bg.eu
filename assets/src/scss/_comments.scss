@@ -1,0 +1,49 @@
+.comments-area, #comments {
+    @extend .container;
+    padding: 0;
+
+    @media only screen and (max-width: 1000px) {
+        margin: 0 2rem;
+    }
+}
+
+.comment-respond {
+    margin-top: 3rem;
+
+    #reply-title {
+        font-size: 1.4em;
+    }
+    #commentform {
+        label, .comment-form-cookies-consent {
+            display: none;
+        }
+    
+        input, textarea {
+            border: none;
+            border: 1px solid #E1E1E1;
+            border-radius: 3px;
+            color: $gray-2;
+            padding: 0.7em 1em;
+
+            &:focus {
+                border-color: $blue;
+                outline: none !important;
+            }
+        }
+
+        #submit {
+            background: $blue;
+            border: none;
+            color: $white;
+            font-size: 1.3em;
+            letter-spacing: 0.1em;
+
+            &:hover {
+                background: $black;
+            }
+        }
+    }
+}
+
+
+

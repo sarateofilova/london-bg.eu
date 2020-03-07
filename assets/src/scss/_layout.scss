@@ -1,0 +1,114 @@
+
+.site {
+    margin: 0 auto;
+    background-color: #FDFDFD;
+    overflow: hidden;
+
+    &-header {
+        position: relative;
+     
+
+        .bottom-header-container {
+            padding: 3em 0 1em 0;
+            @media only screen and (max-width: 800px) {
+                padding: 1em 0 0.5em 0;
+            }
+            z-index: 999;
+            background: rgba($white, 0.97);
+            border-bottom: 1px solid $white-gray;
+        }
+        
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;         
+        }
+        
+    }
+
+    &-footer {
+        padding: 2em;
+        border-top: 2px solid #CCC;
+    }
+}
+
+.site-title, .site-description {
+    display: none;
+}
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.content-elements {
+    padding: 0 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Gallery
+
+.aigpl-breadcrumb-wrp {
+    display:none !important;
+}
+//School bases page
+
+.school-bases {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: 950px) {
+        & {
+            padding: 0 2rem;
+        }
+    }
+}
+
+//Courses agenda
+.one_half {
+    width: 50%;
+    float: left;
+    @media only screen and (max-width: 786px) {
+        & {
+            width: 100%;
+        }
+    }
+}
+
+
+//Post Archive News
+.archive-area {
+    margin-bottom: 2em;
+    .page-header {
+        @extend .content-elements;
+    }
+    .entry-content {
+        @extend .content-elements;
+    }
+    .image {
+        @extend .content-elements;
+        padding-top: 2em;
+        max-width: 400px;
+
+        @media only screen and (max-width: 700px) {
+            padding: 0;
+        }
+        a {
+            display: block;
+            @media only screen and (max-width: 700px) {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.alignleft {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
